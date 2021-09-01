@@ -29,9 +29,9 @@ class MetadataScraper(metadata_scraper.MetadataScraper):
             'password': connection_args.get('pass'),
 
             # connection timeout is not enabled by default
-            # 5 seconds timeout for a socket operation
+            # 30 seconds timeout for a socket operation
             # (Establishing a TCP connection or read/write operation)
-            'connection_timeout': 5
+            'connection_timeout': 30
         }
 
         return vertica_python.connect(**conn_info)
